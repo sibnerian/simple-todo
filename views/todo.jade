@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    for obj in todos
+        li #{obj.todo}
+
+  form(method="post", action="/todo")
+    p
+        input(type="text" name="todo")
+    p
+        input.button(type="submit" value="Go")
